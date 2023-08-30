@@ -20,5 +20,5 @@ from buy.views import homepage, item
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage, name='homepage'),
-    path('', item, name='item'),
+    path('item/<int:pk>', item, name='item'),
 ]

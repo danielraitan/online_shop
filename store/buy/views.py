@@ -10,8 +10,8 @@ def homepage(request):
 
     return render(request, 'homepage.html',context)
 
-def item(request):
-    items = ItemInfo.objects.all()
+def item(request,pk):
+    items = ItemInfo.objects.get(id=pk)
 
     context = {
         'items': items
