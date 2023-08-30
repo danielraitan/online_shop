@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse # pass view information into the browser
 from .models import ItemInfo
 
 def homepage(request):
@@ -10,3 +9,12 @@ def homepage(request):
     }
 
     return render(request, 'homepage.html',context)
+
+def item(request):
+    items = ItemInfo.objects.all()
+
+    context = {
+        'items': items
+    }
+
+    return render(request, 'item.html',context)
