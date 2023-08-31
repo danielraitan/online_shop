@@ -18,3 +18,12 @@ def item(request,pk):
     }
 
     return render(request, 'item.html',context)
+
+def signUp(request):
+    # items = ItemInfo.objects.get(id=pk)
+
+    # context = {
+    #     'items': items
+    # }
+
+    return render(request, 'signup.html')
