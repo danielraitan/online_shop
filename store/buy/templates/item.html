@@ -2,15 +2,23 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <h1>item </h1>
-            {% for item in items %}
-                {{item.item_name}}
-                {{item.item_color}}
-                {{item.type}}
-            {% endfor %}
-        </div>
-    </div>
-</div>
 
+        <div class="col-lg-8 col-md-12 m-2">
+            <img class="card-img-top sellImage" src="{{item.item_image}}"alt="image">
+        </div>
+
+        <div class="col-lg-3 col-md-12 m-2">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-header">
+                    {{item.item_name}}
+                </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Color:{{item.color}}</li>
+                      <li class="list-group-item">Size: {{item.size}}</li>
+                      <li class="list-group-item">Price: {{items.price}}$</li>
+                    </ul>
+            </div>
+        </div>
+        
+            <div/>
 {% endblock content %}
