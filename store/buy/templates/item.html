@@ -27,4 +27,23 @@
         </div>
         
     </div>
+
+    {% if user.is_authenticated %}
+      
+    
+    <li class="">
+      on {{user.username}}
+      <a href="{%url 'homepage' %}" class="">buy now</a>
+      <a href="{%url 'homepage' %}" class="">add to cart</a>
+    </li>
+
+    {% else %}
+
+    <li class="">
+     off
+     <a href="{%url 'login' %}" class="">buy now</a>
+     <a href="{%url 'login' %}" class="">add to cart</a>
+    </li>
+
+    {% endif %}
 {% endblock content %}
